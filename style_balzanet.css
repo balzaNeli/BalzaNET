@@ -10,20 +10,30 @@ html {
 }
 
 section {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 90px; 
 }
 
 body {
     background-color: #0B1120;
+    padding-top: 90px; 
 }
 
 #header header {
-    background-color: #020617;
+    position: fixed;             
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background: rgba(2, 6, 23, 0.75); 
+    backdrop-filter: blur(6px);       
+
     display: flex;
     align-items: center;
-    padding: 10px 5%;
-    width: 100%;
+
+    padding: 6px 5%;   
     gap: 40px;
+
+    z-index: 1000;     
 }
 
 #header header img {

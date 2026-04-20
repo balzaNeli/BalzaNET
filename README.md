@@ -7,6 +7,7 @@
 <p align="center">
   <strong>Conexão de elite com performance de fibra óptica real.</strong><br>
   Uma Landing Page moderna, responsiva e integrada com área do cliente e suporte técnico.
+  <h1><strong>Link do site:</strong>[text](https://balzaneli.github.io/BalzaNET/balzanet.html)</h1>
 </p>
 
 <p align="center">

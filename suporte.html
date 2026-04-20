@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style_balzanet.css">
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: var(--color-dark-800);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--color-dark-700);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            background: var(--color-dark-900);
+            border: 1px solid var(--color-dark-700);
+            color: white;
+            border-radius: 8px;
+        }
+        label { font-family: var(--font-display); color: var(--color-brand-gold); }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 style="font-family: var(--font-display); margin-bottom: 20px;">Abrir Chamado Técnico</h2>
+        
+        <form action="https://formspree.io/f/seu-id-aqui" method="POST">
+            <label>Assunto:</label>
+            <input type="text" name="assunto" placeholder="Ex: Lentidão na conexão" required>
+            
+            <label>Descrição do Problema:</label>
+            <textarea name="mensagem" rows="5" placeholder="Descreva o que está acontecendo..." required></textarea>
+            
+            <button type="submit" class="btn-primary" style="width: 100%;">Enviar Chamado</button>
+        </form>
+    </div>
+</body>
+</html>

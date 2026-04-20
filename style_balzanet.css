@@ -167,3 +167,168 @@ header a:hover { color: var(--color-accent); }
     font-weight: 700;
     margin: 20px 0;
 }
+
+
+/* --- Mobile Navigation --- */
+
+/* Esconde o checkbox */
+#menu-check {
+    display: none;
+}
+
+
+.menu-icon {
+    display: none; /* Escondido no desktop */
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1100;
+}
+
+.hamburguer {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: var(--color-brand-gold);
+    position: relative;
+    transition: var(--ease-smooth);
+}
+
+.hamburguer::before,
+.hamburguer::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    position: absolute;
+    transition: var(--ease-smooth);
+}
+
+.hamburguer::before { top: -8px; }
+.hamburguer::after { bottom: -8px; }
+
+
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+        padding: 15px 7%;
+    }
+
+    .menu-icon {
+        display: block; /* Mostra o ícone no mobile */
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Menu começa escondido à direita */
+        width: 80%;
+        height: 100vh;
+        background: var(--color-dark-800);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: var(--ease-smooth);
+        border-left: 1px solid var(--color-dark-700);
+        z-index: 1050;
+    }
+
+    /* Quando o checkbox estiver marcado, o menu aparece */
+    #menu-check:checked ~ .nav-menu {
+        right: 0;
+    }
+
+    /* Animação do ícone para "X" quando aberto */
+    #menu-check:checked ~ .menu-icon .hamburguer {
+        background: transparent;
+    }
+
+    #menu-check:checked ~ .menu-icon .hamburguer::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    #menu-check:checked ~ .menu-icon .hamburguer::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+
+    .nav-menu a {
+        font-size: 1.2rem;
+    }
+}
+/* --- Melhoria no Desktop --- */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 45px; /* Aumentado de 30px para 45px para dar mais respiro */
+    margin-left: auto;
+}
+
+/* --- Correção do Menu Mobile --- */
+
+/* Overlay (Fundo que escurece o site ao abrir o menu) */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1040; /* Abaixo do menu, acima do conteúdo */
+}
+
+/* Exibe o overlay apenas quando o menu está marcado */
+#menu-check:checked ~ .menu-overlay {
+    display: block;
+}
+
+/* Ajuste de profundidade para garantir que o ícone de fechar (X) fique visível */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+    z-index: 1100; /* Sempre no topo */
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%; /* Um pouco menor para mostrar o overlay lateral */
+        height: 100vh;
+        background: var(--color-dark-800);
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        transition: var(--ease-smooth);
+        z-index: 1050;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    }
+
+    #menu-check:checked ~ .nav-menu {
+        right: 0;
+    }
+
+    /* Garante que os links ocupem espaço para clique fácil */
+    .nav-menu a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1.3rem;
+    }
+}

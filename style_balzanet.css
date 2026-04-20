@@ -332,3 +332,36 @@ header a:hover { color: var(--color-accent); }
         font-size: 1.3rem;
     }
 }
+
+.ds-card-vantagem1, .ds-card-vantagem2, .ds-card-vantagem3 {
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-700);
+    padding: 40px 30px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 280px;
+    transition: var(--ease-smooth);
+    font-size: 1.3rem;
+}
+
+.cards-container-vantagens {
+    display: flex;
+    gap: 30px;
+    padding: 50px 5%;
+    flex-wrap: wrap;
+}
+
+
+
+#vantagens {
+    padding: 100px 5%;
+    
+}
+
+#vantagens h2 {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BalzaNET — Área do Cliente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_balzanet.css">
+    <link rel="stylesheet" href="area_do_cliente.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <img src="assets/balzanet logo.png" alt="BalzaNET">
+        <nav>
+            <a href="#" class="active"><span>Dashboard</span></a>
+            <a href="#"><span>Minhas Faturas</span></a>
+            <a href="#"><span>Meu Plano</span></a>
+            <a href="#"><span>Suporte Técnico</span></a>
+            <a href="#"><span>Configurações</span></a>
+            <a href="balzanet.html" style="margin-top: 50px; color: #ff4757;"><span>Sair</span></a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="welcome-header">
+            <h1>Olá, Cliente BalzaNET!</h1>
+            <p>Bem-vindo à sua central de controle. Tudo sob controle na sua conexão.</p>
+        </header>
+
+        <div class="dashboard-grid">
+            <div class="widget-card">
+                <h3>Seu Plano</h3>
+                <div class="plan-info">600 Mega Gamer</div>
+                <p style="color: #888;">Status: <span class="status-badge">Ativo</span></p>
+                <button class="btn-primary" style="margin-top: 20px; width: 100%; font-size: 0.8rem;">Turbinar Plano</button>
+            </div>
+
+            <div class="widget-card">
+                <h3>Financeiro</h3>
+                <p style="margin-bottom: 10px;">Fatura de Abril/2026</p>
+                <div style="font-size: 1.8rem; font-weight: 800; margin-bottom: 10px;">R$ 129,90</div>
+                <span class="status-badge pending">Aguardando Pagamento</span>
+                <button class="btn-primary" style="margin-top: 20px; width: 100%; font-size: 0.8rem;">Pagar com PIX</button>
+            </div>
+
+            <div class="widget-card">
+                <h3>Consumo em Tempo Real</h3>
+                <div style="height: 10px; background: #333; border-radius: 5px; margin: 20px 0; overflow: hidden;">
+                    <div style="width: 65%; height: 100%; background: var(--color-brand-gold);"></div>
+                </div>
+                <p style="font-size: 0.85rem; color: #888;">Você utilizou 420GB de tráfego este mês.</p>
+            </div>
+
+            <div class="widget-card">
+                <h3>Suporte</h3>
+                <p>Nenhum chamado aberto no momento.</p>
+                <button class="btn-primary" style="margin-top: 20px; width: 100%; background: transparent; border: 1px solid var(--color-brand-gold); color: var(--color-brand-gold);">Abrir Chamado</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

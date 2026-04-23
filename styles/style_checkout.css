@@ -1,0 +1,117 @@
+body {
+    background-color: var(--color-dark-900);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.checkout-container {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 30px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Seção de Dados */
+.checkout-form, .order-summary {
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-700);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+h2 {
+    font-family: var(--font-display);
+    color: var(--color-brand-gold);
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+    color: var(--color-dark-200);
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-dark-700);
+    color: white;
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--color-brand-gold);
+}
+
+/* Opções de Pagamento */
+.payment-methods {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.method-card {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid var(--color-dark-700);
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--ease-smooth);
+}
+
+.method-card:hover, .method-card.active {
+    border-color: var(--color-brand-gold);
+    background: rgba(235, 179, 86, 0.05);
+}
+
+/* Resumo do Pedido */
+.order-summary {
+    height: fit-content;
+}
+
+.item-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color-dark-700);
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--color-white);
+    margin-top: 20px;
+}
+
+@media (max-width: 850px) {
+    .checkout-container { grid-template-columns: 1fr; }
+    body { padding-top: 40px; }
+}
+
+/* Esconde elementos */
+.hidden {
+display: none !important;
+}
+
+/* Estilo para quando o card estiver selecionado */
+.method-card.active {
+border-color: var(--color-brand-gold) !important;
+background: rgba(235, 179, 86, 0.1) !important;
+box-shadow: 0 0 10px rgba(235, 179, 86, 0.2);
+}
